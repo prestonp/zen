@@ -1,0 +1,15 @@
+doctype 5
+html
+  head
+    title= title
+    block css
+      link(rel='stylesheet', href='/css/style.css')
+      link(rel='stylesheet', href='/css/bootstrap.min.css')
+  body
+    block content
+  
+    block js
+      script(src='/js/jquery-1.10.2.min.js')
+      script(src='/js/bootstrap.min.js')
+      script(src='/js/marked.js')
+      script(src='/js/main.js')
