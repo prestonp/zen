@@ -1,5 +1,5 @@
 /**
- * Zen mode markdown paste app
+ * edit page
  */
 ;(function() {
   // Cache dom elements
@@ -7,12 +7,17 @@
     , $preview = $('.preview-container')
     , previewPlaceholder = '<p class="text-muted">Snippet Preview</p>';
 
+  // Parse markdown on key input
+  var parseText = function() {
+    var text = $edit.val();
+    $preview.html(marked(text) || previewPlaceholder);
+  };
+
+  $edit.keyup(parseText);
+
   // Smooth css animation by appending newlines
   $edit.autosize({append: "\n"});
 
-  // Parse markdown on key input
-  $edit.keyup(function() {
-    var text = $edit.val();
-    $preview.html(marked(text) || previewPlaceholder);
-  });
+  // Parse in case history(-1)
+  parseText();
 })();

@@ -1,9 +1,17 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var
+  mongoose = require('mongoose')
+, shortId = require('shortid')
+, Schema = mongoose.Schema;
+
+// Use custom id generation
+var options = {
+  _id: false
+};
 
 var snippetSchema = new Schema({
-  body:   String,
-  createdAt: { type: Date, default: Date.now }
-});
+  _id: { type: String, default: shortId.generate() }
+, body:   String
+, createdAt: { type: Date, default: Date.now }
+}, options);
 
-exports = mongoose.model('Snippet', snippetSchema);
+module.exports = mongoose.model('Snippet', snippetSchema);

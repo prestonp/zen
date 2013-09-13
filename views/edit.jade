@@ -1,12 +1,13 @@
 extends layout
 
 block content
-  .container
+  form(action='/', method='post').container
     .row
       .col-lg-6.edit-container
-        form
-          textarea(rows='3', placeholder='Enter text here!', autofocus)
+        textarea(name='txt', rows='3', placeholder='Enter text here!', autofocus)
+        p
+          button.btn.btn-lg.btn-primary Save
       .col-lg-6.preview-container
-    .row
-      .col-lg-12
-        button.btn.btn-lg.btn-primary Save
+
+block append js
+  script(src='/js/edit.js')

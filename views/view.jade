@@ -1,5 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .row
+      .col-lg-6.col-lg-offset-3
+        p.snippet-container
+          = snippet.body
+        a.btn.btn-lg.btn-primary.btn-toggle(href='/')
+          span.glyphicon.glyphicon-pencil &nbsp;
+          | create new snippet
+block append js
+  script(src='/js/view.js')
