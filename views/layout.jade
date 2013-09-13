@@ -1,15 +1,16 @@
 doctype 5
 html
   head
-    title= title
+    title zen
     block css
-      link(rel='stylesheet', href='/css/style.css')
       link(rel='stylesheet', href='/css/bootstrap.min.css')
+      link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Code+Pro', type='text/css')
+      link(rel='stylesheet', href='/css/style.css')
   body
     block content
-  
     block js
       script(src='/js/jquery-1.10.2.min.js')
       script(src='/js/bootstrap.min.js')
       script(src='/js/marked.js')
+      script(src='/js/jquery.autosize.min.js')
       script(src='/js/main.js')

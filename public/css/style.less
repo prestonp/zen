@@ -1,18 +1,59 @@
+/**
+ * Customization
+ */
+
+@transitionSpeed: 0.2s;
+@limegreen: #32CD32;
+@darklimegreen: darken(@limegreen, 10%);
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-top: 50px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+/**
+ * Mixins
+ */
+
+.animated (@speed: @transitionSpeed) {
+  -webkit-transition: height @speed;
+  -moz-transition: height @speed;
+  transition: height @speed;
 }
+
+/**
+ * Text areas
+ */
 
 .edit-container textarea {
-  width: 100%;
-  border: none;
-  outline: 0;
+  width:            100%;
+  border:           none;
+  border-right:     1px solid #eee;
+  outline:          0;
+  font-family:      'Source Code Pro', sans-serif;
+  overflow:         hidden;
+  word-wrap:        break-word;
+  resize:           none;
+  .animated();
 }
 
-.preview-container textarea {
-  width: 100%;
+/**
+ * Buttons
+ */
+
+.btn-color(@color) {
+  background-color:   @color;
+  border-color:       @color;
+}
+
+.btn-primary {
+  .btn-color(@limegreen);
+}
+
+.btn-primary:hover {
+  .btn-color(@darklimegreen);
+}
+
+.btn-primary:focus {
+  .btn-color(@darklimegreen);
 }

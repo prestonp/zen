@@ -2,10 +2,11 @@ extends layout
 
 block content
   .container
-    .row-fluid
+    .row
       .col-lg-6.edit-container
         form
-          textarea(rows='10', autofocus)
-          div
-            button.btn.btn-primary Save
+          textarea(rows='3', placeholder='Enter text here!', autofocus)
       .col-lg-6.preview-container
+    .row
+      .col-lg-12
+        button.btn.btn-lg.btn-primary Save

@@ -1,15 +1,41 @@
+/**
+ * Customization
+ */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-top: 50px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-a {
-  color: #00B7FF;
-}
+/**
+ * Mixins
+ */
+/**
+ * Text areas
+ */
 .edit-container textarea {
   width: 100%;
   border: none;
+  border-right: 1px solid #eee;
   outline: 0;
+  font-family: 'Source Code Pro', sans-serif;
+  overflow: hidden;
+  word-wrap: break-word;
+  resize: none;
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  transition: height 0.2s;
 }
-.preview-container textarea {
-  width: 100%;
+/**
+ * Buttons
+ */
+.btn-primary {
+  background-color: #32cd32;
+  border-color: #32cd32;
+}
+.btn-primary:hover {
+  background-color: #28a428;
+  border-color: #28a428;
+}
+.btn-primary:focus {
+  background-color: #28a428;
+  border-color: #28a428;
 }

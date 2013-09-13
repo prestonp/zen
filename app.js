@@ -32,7 +32,7 @@ app.configure('development', function(){
 
 app.get('/', routes.edit);
 app.post('/', routes.create);
-app.get('/view/:id', routes.view);
+app.get('/:id', routes.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
