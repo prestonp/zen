@@ -11,7 +11,7 @@ install
 3. npm install
 4. browse to http://localhost:3000  
     
-check out a [demo](zen.drawwww.com)!
+check out a [demo](http://zen.drawwww.com)!
 
 license
 -------
