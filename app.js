@@ -9,8 +9,8 @@ var express = require('express')
   , path = require('path')
   , mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/zen');
-
+mongoose.connect(process.env.MONGOHQ_URL || 'mongodb://localhost/zen');
+console.log(process.env.MONGOHQ_URL);
 var app = express();
 
 app.configure(function(){
